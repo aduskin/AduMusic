@@ -1,0 +1,145 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AduMusic.Views"
+      xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" x:Class="AduMusic.Views.MusicList"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="600" Loaded="Page_Loaded"
+      Title="MusicList">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/FormControl.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/TabControl_Friend.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/ScrollView.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/SelectDate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/Login.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/Menu.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/ItemControlTemp.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/ListBox.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/WSlider.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/WButton.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/ListView.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/DataGridForSong.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Page.Resources>
+    <ScrollViewer Style="{StaticResource WScrollviewer}">
+        <StackPanel>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Background="#10ffffff" Height="200" Grid.Row="0" >
+                    <Grid  Margin="10,0" >
+                        <StackPanel VerticalAlignment="Center">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="190"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Height="146" Width="146" >
+                                    <Grid.Background>
+                                        <!--<Image Height="146" Width="146" Source="../Images/Background/Sys.png"></Image>-->
+                                        <ImageBrush ImageSource="../Images/Background/Sys.png" Stretch="Fill"/>
+                                    </Grid.Background>
+                                    <Button Style="{StaticResource WButton_IconText}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="Transparent" Tag="&#xE63F;" Content="96" Margin="4" Height="20"/>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <StackPanel>
+                                        <Grid>
+                                            <StackPanel HorizontalAlignment="Left">
+                                                <Label FontSize="24" FontWeight="Bold" Foreground="#fff" Content="无尽FM" />
+                                                <StackPanel Orientation="Horizontal" Margin="0,4">
+                                                    <Border CornerRadius="3" Height="24" Width="24" VerticalAlignment="Top" Margin="0,0,0,0">
+                                                        <Image Height="24" Width="24" Source="../Images/Nor/NorHeader.jpg" Clip="{StaticResource ResourceKey=MusicListHeader}"/>
+                                                    </Border>
+                                                    <Button Style="{StaticResource SysButton}"  Margin="10,0,0,0" FontSize="14" Foreground="#80ffffff"   Content="Rover"/>
+                                                    <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                                                        <Button Style="{StaticResource SysButton}" Margin="2,0" FontSize="14" Foreground="#90ffffff" FontWeight="Light" Content="#摇滚"/>
+                                                        <Button Style="{StaticResource SysButton}" Margin="2,0"  FontSize="14" Foreground="#90ffffff" FontWeight="Light" Content="#励志"/>
+                                                        <Button Style="{StaticResource SysButton}" Margin="2,0"  FontSize="14" Foreground="#90ffffff" FontWeight="Light" Content="#爵士"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                                <Label Margin="0,4" FontSize="12" Foreground="#50ffffff" Content="我天空里的一片云，偶尔停留在你心中。" />
+                                                <StackPanel Orientation="Horizontal" Height="40">
+                                                    <Button Style="{StaticResource WButton_IconText_Transpan}" Margin="2,0" VerticalAlignment="Bottom" FontSize="12" Tag="&#xE615;" FontWeight="Light" Content="播放全部"/>
+                                                    <Button Style="{StaticResource WButton_IconText_Transpan}" Margin="2,0" VerticalAlignment="Bottom" FontSize="12" Tag="&#xE604;" FontWeight="Light" Content="下载"/>
+                                                    <Button Style="{StaticResource WButton_IconText_Transpan}" Margin="2,0" VerticalAlignment="Bottom" FontSize="12" Tag="&#xE669;" FontWeight="Light" Content="批量操作"/>
+                                                    <Button Style="{StaticResource WButton_IconText_Transpan}" Margin="2,0" VerticalAlignment="Bottom" FontSize="12" Tag="&#xE6B2;" FontWeight="Light" Content="分享"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Top">
+                                                <Button Style="{StaticResource WButton_TopIconText_Transpan}" FontSize="12"  Background="Transparent" Tag="&#xE62E;" Content="编辑"/>
+                                                <Button Style="{StaticResource WButton_TopIconText_Transpan}" FontSize="12"  Background="Transparent" Tag="&#xE67A;" Content="投稿"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <Grid Height="600" Grid.Row="1">
+                    <TabControl  Background="Transparent" Style="{StaticResource MyTab}" BorderThickness="0" Margin="20,0">
+                        <TabItem Style="{StaticResource Wtab}" Header="歌曲" Tag="36">
+                            <DataGrid Grid.Row="1" x:Name="gridList" Margin="0" Style="{StaticResource DefaultDataGrid}" GridLinesVisibility="None" BorderThickness="0">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="歌曲" Width="3*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Grid Name="SongNames">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="110"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0">
+                                                        <TextBlock Text="{Binding SongName}"></TextBlock>
+                                                    </Grid>
+                                                    <StackPanel Orientation="Horizontal" Grid.Column="1" Name="Controls" Visibility="Hidden">
+                                                        <Button Width="20" Style="{StaticResource SysButton}" Margin="4,0,0,0"   Background="Transparent" Foreground="#50ffffff" FontSize="18" Content="&#xe615;"/>
+                                                        <Button Width="20" Style="{StaticResource SysButton}" Margin="4,0,0,0"   Background="Transparent" Foreground="#50ffffff" FontSize="18" Content="&#xe604;"/>
+                                                        <Button Width="20" Style="{StaticResource SysButton}" Margin="4,0,0,0"   Background="Transparent" Foreground="#50ffffff" Content="&#xe600;"/>
+                                                        <Button Width="20" Style="{StaticResource SysButton}" Margin="4,0,0,0"   Background="Transparent" Foreground="#50ffffff" FontSize="18" Content="&#xe62f;"/>
+                                                    </StackPanel>
+                                                </Grid>
+
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Width="*" Header="歌手" Binding="{Binding SingerName}"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="专辑" Width="*" Binding="{Binding ZhuanName}"></DataGridTextColumn>
+                                    <!--<DataGridTextColumn Header="大小" Width="*" Binding="{Binding SongSize}"></DataGridTextColumn>-->
+                                    <!--<Columns.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Controls" Property="Visibility" Value="Collapsed" />
+                                </Trigger>
+                            </Columns.Triggers>-->
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+                            <!--</Grid>-->
+                        </TabItem>
+                        <TabItem Style="{StaticResource Wtab}" Header="最近收藏" >
+                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Top" Margin="0,20">
+                                <Label FontSize="14" Foreground="#50ffffff" Content="最近收藏" />
+                                <Label FontSize="14" Foreground="#50ffffff" Content="暂无收藏" />
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Style="{StaticResource Wtab}" Header="评论">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBox Text="暂无评论" BorderThickness="0" Background="Transparent" FontSize="12" Padding="20"></TextBox>
+                            </StackPanel>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+
+</Page>

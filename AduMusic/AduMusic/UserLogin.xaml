@@ -1,0 +1,73 @@
+﻿<Window x:Class="AduMusic.UserLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AduMusic"
+        mc:Ignorable="d"
+        Title="登录" Height="450" Width="300" AllowsTransparency="True" WindowStyle="None" BorderThickness="20" Icon="Images/ICON/48.ico" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen">
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="40" Opacity="0.3" ShadowDepth="0"/>
+    </Window.Effect>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/Login.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/FormControl.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Background/f3.jpg" Stretch="UniformToFill"></ImageBrush>
+        </Grid.Background>
+        <Grid Background="#30ffffff">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <Button FocusVisualStyle="{x:Null}" Style="{StaticResource Button_Transparent}" Margin="4,4" Name="BtnSearch"  Foreground="#60ffffff" HorizontalAlignment="Left" FontSize="16" Content="&#xe672;" Width="30"  Background="Transparent" BorderThickness="0"></Button>
+                        <TextBlock Text="AduMusic" FontWeight="Light" Foreground="#60ffffff" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0" FontSize="14"></TextBlock>
+                    </StackPanel>
+                    <Button Style="{StaticResource CloseButton}" VerticalAlignment="Top" Name="btnClose" Width="40" Height="40" FontSize="14" HorizontalAlignment="Right"   Background="Transparent"  Content="&#xe606;" BorderThickness="0" Click="btnClose_Click" />
+                </Grid>
+            </Border>
+            <Border Grid.Row="1">
+                <StackPanel VerticalAlignment="Center">
+                    <Border BorderBrush="#60ffffff" BorderThickness="0"  Width="92" Height="92" Margin="0">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="20" ShadowDepth="0" Color="#60ffffff"></DropShadowEffect>
+                        </Border.Effect>
+                        <Image Source="Images/Nor/Cover.png"  Clip="{StaticResource ResourceKey=LoginHeader}" ></Image>
+                    </Border>
+                    <!--<Border CornerRadius="3,3,0,0" BorderBrush="#16000000" BorderThickness="1,1,1,0" Background="Transparent" Width="200" Height="36" Margin="10,30,10,00">
+                    <Grid>
+                        <Button Style="{StaticResource Button_Transparent}" Foreground="#60000000" Content="&#xe608;" FontSize="18" HorizontalAlignment="Left" Width="20" Margin="4,0,4,0" Background="Transparent" BorderThickness="0"  ></Button>
+                        <TextBox  Width="160" FontSize="14" Foreground="#999" VerticalAlignment="Center" ForceCursor="True" FontFamily="微软雅黑" Text="AduGlory" Background="Transparent"  BorderThickness="0" Margin="18,0,0,0"/>
+                    </Grid>
+                </Border>-->
+                    <Border CornerRadius="3,3,0,0" BorderBrush="#60ffffff" BorderThickness="1,1,1,0" Background="Transparent" Width="200" Height="36" Margin="10,30,10,00">
+                        <Grid>
+                            <Button Style="{StaticResource Button_Transparent}" Foreground="#60ffffff" Content="&#xe6f4;" FontSize="18" HorizontalAlignment="Left" Width="20" Margin="4,0,4,0" Background="Transparent" BorderThickness="0"  ></Button>
+                            <TextBox Text="非完美" Width="160" FontSize="14" Foreground="#60ffffff" VerticalAlignment="Center"  FontFamily="微软雅黑" Background="Transparent" BorderThickness="0" Margin="18,0,0,0"/>
+                        </Grid>
+                    </Border>
+                    <Border CornerRadius="0,0,3,3"  BorderBrush="#60ffffff" BorderThickness="1" Background="Transparent" Width="200" Height="36">
+                        <Grid>
+                            <Button Style="{StaticResource Button_Transparent}" Foreground="#60ffffff" Content="&#xe62f;" FontSize="18" HorizontalAlignment="Left" Width="20" Margin="4,0,4,0" Background="Transparent" BorderThickness="0"  ></Button>
+                            <PasswordBox MaxLength="18" PasswordChar="●" Password="12312123"  Width="160" FontSize="14" Foreground="#60ffffff" VerticalAlignment="Center"  FontFamily="微软雅黑" Background="Transparent" BorderThickness="0" Margin="18,0,0,0" />
+                        </Grid>
+                    </Border>
+                    <CheckBox Style="{StaticResource WCheckBox}" HorizontalAlignment="Center" Content="保存密码" Margin="0,4"></CheckBox>
+                    <Button Style="{StaticResource LoginButton}" Name="Login" Background="Transparent" BorderBrush="#60ffffff" Margin="0,0,0,0" Foreground="#60ffffff" Content="登         录" Width="200" Height="32" ></Button>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="AduMusic.MiniWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AduMusic"
+        mc:Ignorable="d"
+         Title="AduMusic" Height="452" Width="280" Background="Transparent" AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None"  Icon="Images/ICON/48.ico" WindowStartupLocation="CenterScreen" >
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="40" Opacity="0.3" ShadowDepth="0"/>
+    </Window.Effect>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/Style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/WButton.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/ScrollView.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/AduMusic;component/Styles/Menu.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border >
+        <Border.Background>
+            <ImageBrush ImageSource="Images/Background/f3.jpg" Stretch="UniformToFill"></ImageBrush>
+        </Border.Background>
+        <StackPanel>
+            <Grid Height="40" Margin="10,10,10,10" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Grid.ColumnSpan="2" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                    <Label Content="Infinity - Ahxello" FontWeight="Bold" Foreground="#fff" Padding="0" Margin="0,0,0,0"></Label>
+                    <StackPanel Orientation="Horizontal"  Name="winbtn" HorizontalAlignment="Right">
+                        <Button Style="{StaticResource SysButton}" Width="20" FontSize="12" FontWeight="Bold" Foreground="#80ffffff" Name="btnMax" Visibility="Collapsed" Content="&#xe725;" Click="Button_Click"/>
+                        <Button Style="{StaticResource SysButton}" Width="20" FontSize="14" FontWeight="Bold" Foreground="#80ffffff" Name="btnClose" Visibility="Collapsed"  Content="&#xe606;" />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.ColumnSpan="2" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                    <StackPanel Orientation="Horizontal"  >
+                        <Button Style="{StaticResource SysButton}" Margin="0,0,4,0"  FontSize="18" FontWeight="Bold" Name="btnUp" Visibility="Collapsed" Foreground="#90ffffff"  Content="&#xe635;"/>
+                        <Button Style="{StaticResource SysButton}" Margin="0,0,4,0" FontSize="18" FontWeight="Bold" Name="btnPlay" Visibility="Collapsed" Foreground="#90ffffff"  Content="&#xe615;"/>
+                        <Button Style="{StaticResource SysButton}"  FontSize="18" FontWeight="Bold" Name="btnNext" Visibility="Collapsed" Foreground="#90ffffff"  Content="&#xe637;"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                        <Button Style="{StaticResource SysButton}" Width="30" FontSize="16" FontWeight="Bold" Foreground="#90ffffff"  Content="&#xe697;"/>
+                        <Button Style="{StaticResource SysButton}" Width="30" FontSize="16" FontWeight="Bold" Foreground="#90ffffff"  Content="&#xe66c;"/>
+                        <Button Style="{StaticResource SysButton}" Width="30" FontSize="16" FontWeight="Bold" Foreground="#90ffffff"  Content="&#xe73d;"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Border Height="42" Background="#20000000">
+                <Button Style="{StaticResource WButton_TextIcon_Transpan}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="0"  FontSize="13" Content="播放队列" Tag="&#xe60d;"/>
+            </Border>
+        </StackPanel>
+    </Border>
+</Window>

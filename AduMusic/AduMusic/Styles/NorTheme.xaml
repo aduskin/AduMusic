@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AduMusic.Styles">
+    <!--边框色,默认颜色-->
+    <SolidColorBrush x:Key="NorBursh">#FF917B</SolidColorBrush>
+    <!--边框色,默认主题颜色-->
+    <SolidColorBrush x:Key="NorBorderBursh">#fff</SolidColorBrush>
+    <!--边框色,默认选中主题颜色-->
+    <SolidColorBrush x:Key="NorSelectBorderBursh">#000</SolidColorBrush>
+    <!--边框色,默认鼠标移到上面主题颜色-->
+    <SolidColorBrush x:Key="NorHoverBorderBursh">#000</SolidColorBrush>
+    
+    <!--默认背景色-->
+    <SolidColorBrush x:Key="NorBGBursh">#04000000</SolidColorBrush>
+    <!--背景色鼠标选中-->
+    <SolidColorBrush x:Key="NorSelectBGBursh">#10000000</SolidColorBrush>
+    <!--背景色鼠标悬浮-->
+    <SolidColorBrush x:Key="NorHoverBGBursh">#10ffffff</SolidColorBrush>
+    <!--背景色-->
+    <SolidColorBrush x:Key="NorAIBGBursh">#20ffffff</SolidColorBrush>
+
+    <!--默认字体色-->
+    <SolidColorBrush x:Key="NorFGBursh">#fff</SolidColorBrush>
+    <!--默认选中字体色-->
+    <SolidColorBrush x:Key="NorSelectFGBursh">#000</SolidColorBrush>
+    <!--默认悬浮字体色-->
+    <SolidColorBrush x:Key="NorHoverFGBursh">#80ffffff</SolidColorBrush>
+
+    <!--默认字体色-->
+    <FontSizeConverter x:Key="NorFontSize" ></FontSizeConverter>
+
+    <!--默认阴影-->
+    <DropShadowEffect x:Key="Shadow" BlurRadius="10" Opacity="0.8" ShadowDepth="0" Color="#fff"/>
+    <!--卡牌阴影-->
+    <DropShadowEffect x:Key="CardShadow" Color="#303030" Opacity=".25" BlurRadius="5" ShadowDepth="3"/>
+    
+    <!--阴影黑色标题字体-->
+    <DropShadowEffect x:Key="TextShadow-Black" BlurRadius="6" Opacity="0.2" ShadowDepth="0" Color="#000"/>
+    <!--阴影白色标题字体-->
+    <DropShadowEffect x:Key="TextShadow-White" BlurRadius="6" Opacity="0.2" ShadowDepth="0" Color="#fff"/>
+</ResourceDictionary>

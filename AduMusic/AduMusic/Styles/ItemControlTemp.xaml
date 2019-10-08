@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DropShadowEffect x:Key="CardShadow" Color="#303030" Opacity=".25" BlurRadius="5" ShadowDepth="3"/>
+    <Style TargetType="RadioButton" x:Key="SelectItem">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
+        <!--<Setter Property="Height" Value="20"></Setter>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="#999"/>-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border Background="Transparent" x:Name="Item" BorderThickness="0" >
+                        <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" ContentSource="{Binding Source}"></ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Item" Property="Background" Value="#20000000"></Setter>
+                            <Setter Property="Foreground" Value="#555"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter TargetName="Item" Property="Background" Value="#05000000"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
