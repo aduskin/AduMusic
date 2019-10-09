@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AduMusic"
+    "\\AduMusic",
+    "\\AduMusic\\AduMusic",
+    "\\AduMusic\\AduMusic\\obj",
+    "\\AduMusic\\AduMusic\\obj\\Debug"
   ],
   "SelectedNode": "\\AduMusic\\AduMusic.sln",
   "PreviewInSolutionExplorer": false
